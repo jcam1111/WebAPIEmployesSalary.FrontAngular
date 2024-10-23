@@ -1,0 +1,35 @@
+
+
+
+<form  [formGroup]="myForm" (ngSubmit)="getEmployees()" novalidate> 
+
+    <div class="container">
+        
+    <label>Id Employee:</label>  <br> 
+
+    <input name="id"  id="id" class="form-control"   type="number" formControlName="idEmployee" >
+    <button type="submit" style="align-content: center; margin: 5px; "
+          class="btn btn-primary" >Search</button>
+        
+</div>
+</form>
+
+<TABLE BORDER>
+	<TR>
+		<TH>Id</TH> <TH>Name </TH>  <TH>Salary </TH>   <TH>Age </TH>   <TH>Profile Image </TH>   <TH>AnnualSalary </TH> 
+	</TR>
+
+    <tr *ngFor="let employ of lstEmployees">
+        <td >{{employ.id}}</td>
+        <td >{{employ.name}}</td>
+        <td >{{employ.salary}}</td>
+        <td >{{employ.age}}</td>
+        <td >{{employ.profileImage}}</td>
+        <td >{{employ.annualSalary}}</td>
+   
+    </tr>
+
+	
+</TABLE>	
+
+
